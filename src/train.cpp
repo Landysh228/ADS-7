@@ -11,8 +11,8 @@ void Train::addCar(bool light) {
 
   if (first == nullptr) {
     first = freCar;
-    freCar->next = freshCar;
-    freCar->prev = freshCar;
+    freCar->next = freCar;
+    freCar->prev = freCar;
     return;
   }
 
