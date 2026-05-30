@@ -6,11 +6,11 @@ int Train::getOpCount() {
 }
 
 void Train::addCar(bool light) {
-  Car *freshCar = new Car;
+  Car *freCar = new Car;
   freCar->light = light;
 
   if (first == nullptr) {
-    first = freshCar;
+    first = freCar;
     freCar->next = freshCar;
     freCar->prev = freshCar;
     return;
@@ -19,8 +19,8 @@ void Train::addCar(bool light) {
   Car *tail = first->prev;
   freCar->next = first;
   freCar->prev = tail;
-  tail->next = freshCar;
-  first->prev = freshCar;
+  tail->next = freCar;
+  first->prev = freCar;
 }
 
 int Train::getLength() {
